@@ -373,7 +373,7 @@
     async function loadSchedule() {
         try {
             const timestamp = new Date().getTime();
-            const response = await fetch(`./data/schedule.json?t=${timestamp}`);
+            const response = await fetch(`./schedule.json?t=${timestamp}`);
             scheduleData = await response.json();
 
             console.log('Loading real schedule data from schedule.json');
@@ -394,7 +394,7 @@
 
         } catch (error) {
             console.error('Erreur lors du chargement:', error);
-            document.querySelector('.content').innerHTML = '<div class="no-data">Erreur: Impossible de charger data/schedule.json</div>';
+            document.querySelector('.content').innerHTML = '<div class="no-data">Erreur: Impossible de charger schedule.json</div>';
         }
     }
 

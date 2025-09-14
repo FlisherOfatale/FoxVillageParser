@@ -32,9 +32,6 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Create data directory
-        run: mkdir -p docs/data
-
       - name: Run parser and generate schedule
         run: |
           node parser.js
@@ -44,7 +41,7 @@ jobs:
             exit 1
           fi
           # Copy generated schedule to docs folder for GitHub Pages
-          cp schedule.json docs/data/schedule.json
+          cp schedule.json docs/schedule.json
           # Copy index.html if it exists in root, otherwise use the one in docs
           if [ -f index.html ]; then
             cp index.html docs/index.html
@@ -79,14 +76,11 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Create data directory
-        run: mkdir -p docs/data
-
       - name: Copy existing files to docs
         run: |
           # Copy existing schedule.json to docs folder if it exists
           if [ -f schedule.json ]; then
-            cp schedule.json docs/data/schedule.json
+            cp schedule.json docs/schedule.json
           else
             echo "Warning: No schedule.json found in root"
           fi
