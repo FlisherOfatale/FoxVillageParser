@@ -143,33 +143,41 @@ function buildClassLookup(classData) {
 }
 
 // Format class string with detailed information
-function formatClassString(classId, test, statDiv, classLookup, classMapping = {}) {
-    let result = classId;
+function formatClassString(classId, test, classLookup, classMapping = {}) {
+    let className = '';
 
-    // Add class details from lookup if available
-    if (classLookup[classId]) {
-        const classInfo = classLookup[classId];
-        if (classInfo.className) {
-            result += ' - ' + classInfo.className;
-        }
+    // Get class name from lookup
+    if (classLookup[classId] && classLookup[classId].className) {
+        className = classLookup[classId].className;
     }
 
-    // Add test information
+    // Build the full test name for mapping
+    let fullTestName = className;
     if (test) {
-        result += ' - ' + test;
+        fullTestName = test; // Use test name as primary identifier for mapping
     }
 
-    // Add division/category
-    if (statDiv) {
-        result += ' - ' + statDiv;
-    }
-
-    // Apply class mapping if available
-    for (const [originalName, mappedName] of Object.entries(classMapping)) {
-        if (result.includes(originalName)) {
-            result = result.replace(originalName, mappedName);
+    // Apply class mapping first
+    let mappedName = fullTestName;
+    for (const [originalName, mapped] of Object.entries(classMapping)) {
+        if (fullTestName.includes(originalName)) {
+            mappedName = mapped;
             break;
         }
+    }
+
+    // If we found a mapping, use it. Otherwise build the traditional string
+    if (mappedName !== fullTestName) {
+        return mappedName;
+    }
+
+    // Build traditional string
+    let result = classId;
+    if (className) {
+        result += ' - ' + className;
+    }
+    if (test) {
+        result += ' - ' + test;
     }
 
     return result;
@@ -280,9 +288,16 @@ if (require.main === module) {
             console.log('\n=== SCHEDULE ===');
             console.log(JSON.stringify(schedule, null, 2));
 
-            // Save to file
+            // Save to files - both root and docs for local dev and deployment
             fs.writeFileSync('schedule.json', JSON.stringify(schedule, null, 2));
-            console.log('\nSchedule saved to schedule.json');
+
+            // Ensure docs directory exists
+            if (!fs.existsSync('docs')) {
+                fs.mkdirSync('docs', { recursive: true });
+            }
+            fs.writeFileSync('docs/schedule.json', JSON.stringify(schedule, null, 2));
+
+            console.log('\nSchedule saved to schedule.json and docs/schedule.json');
         })
         .catch(error => {
             console.error('Failed:', error);

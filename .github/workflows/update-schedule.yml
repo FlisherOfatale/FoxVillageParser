@@ -35,16 +35,10 @@ jobs:
       - name: Run parser and generate schedule
         run: |
           node parser.js
-          # Verify schedule.json was created
-          if [ ! -f schedule.json ]; then
-            echo "Error: schedule.json was not created"
+          # Verify schedule.json files were created
+          if [ ! -f schedule.json ] || [ ! -f docs/schedule.json ]; then
+            echo "Error: schedule.json files were not created"
             exit 1
-          fi
-          # Copy generated schedule to docs folder for GitHub Pages
-          cp schedule.json docs/schedule.json
-          # Copy index.html if it exists in root, otherwise use the one in docs
-          if [ -f index.html ]; then
-            cp index.html docs/index.html
           fi
 
       - name: Check for changes
@@ -76,17 +70,15 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Copy existing files to docs
+      - name: Verify existing files
         run: |
-          # Copy existing schedule.json to docs folder if it exists
-          if [ -f schedule.json ]; then
-            cp schedule.json docs/schedule.json
-          else
-            echo "Warning: No schedule.json found in root"
+          # Verify schedule.json exists in both locations
+          if [ ! -f schedule.json ] || [ ! -f docs/schedule.json ]; then
+            echo "Warning: schedule.json not found in expected locations"
           fi
-          # Copy index.html if it exists in root, otherwise use the one in docs
-          if [ -f index.html ]; then
-            cp index.html docs/index.html
+          # Verify index.html exists in docs
+          if [ ! -f docs/index.html ]; then
+            echo "Warning: docs/index.html not found"
           fi
 
       - name: Check for changes
