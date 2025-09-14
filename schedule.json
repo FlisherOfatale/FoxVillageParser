@@ -1,0 +1,66 @@
+[
+  {
+    "rider_name": "Champagne, Chloé",
+    "rider_id": 536,
+    "class": "1151 - Entrainement 1 - JR/YR",
+    "ring": "Ring 4",
+    "day": "Vendredi",
+    "time": "14:28"
+  },
+  {
+    "rider_name": "Champagne, Chloé",
+    "rider_id": 536,
+    "class": "1152 - Entrainement 2 - JR/YR",
+    "ring": "Ring 4",
+    "day": "Samedi",
+    "time": "09:06"
+  },
+  {
+    "rider_name": "Champagne, Chloé",
+    "rider_id": 536,
+    "class": "1153 - Entrainement 3 - JR/YR",
+    "ring": "Ring 4",
+    "day": "Dimanche",
+    "time": "09:18"
+  },
+  {
+    "rider_name": "Charbonneau, Emma",
+    "rider_id": 535,
+    "class": "1101 - Initiation A - JR/YR",
+    "ring": "Ring 3",
+    "day": "Vendredi",
+    "time": "08:13"
+  },
+  {
+    "rider_name": "Charbonneau, Emma",
+    "rider_id": 535,
+    "class": "500 - Dressage Combiné - JR/YR",
+    "ring": "Ring 4",
+    "day": "Vendredi",
+    "time": "10:01"
+  },
+  {
+    "rider_name": "Charbonneau, Emma",
+    "rider_id": 535,
+    "class": "1102 - Initiation B - JR/YR",
+    "ring": "Ring 2",
+    "day": "Samedi",
+    "time": "09:24"
+  },
+  {
+    "rider_name": "Charbonneau, Emma",
+    "rider_id": 535,
+    "class": "501 - Combinee obstacle - JR/YR",
+    "ring": "Combiné",
+    "day": "Samedi",
+    "time": "14:29"
+  },
+  {
+    "rider_name": "Charbonneau, Emma",
+    "rider_id": 535,
+    "class": "1103 - Initiation C - JR/YR",
+    "ring": "Ring 2",
+    "day": "Dimanche",
+    "time": "08:06"
+  }
+]
