@@ -29,21 +29,35 @@ jobs:
     - name: Run parser and generate schedule
       run: |
         node parser.js
-        # Copy generated schedule and updated index.html to docs folder for GitHub Pages
+        # Verify schedule.json was created
+        if [ ! -f schedule.json ]; then
+          echo "Error: schedule.json was not created"
+          exit 1
+        fi
+        # Copy generated schedule to docs folder for GitHub Pages
         cp schedule.json docs/data/schedule.json
-        cp index.html docs/index.html 2>/dev/null || true
+        # Copy index.html if it exists in root, otherwise use the one in docs
+        if [ -f index.html ]; then
+          cp index.html docs/index.html
+        fi
 
     - name: Check for changes
       id: git-check
       run: |
-        git diff --exit-code docs/ schedule.json || echo "changed=true" >> $GITHUB_OUTPUT
+        git add docs/ schedule.json
+        if git diff --cached --quiet; then
+          echo "No changes to commit"
+          echo "changed=false" >> $GITHUB_OUTPUT
+        else
+          echo "Changes detected"
+          echo "changed=true" >> $GITHUB_OUTPUT
+        fi
 
     - name: Commit and push if changed
       if: steps.git-check.outputs.changed == 'true'
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add docs/ schedule.json
         git commit -m "🤖 Auto-update competition schedule - $(date -u '+%Y-%m-%d %H:%M UTC')"
         git push
 

@@ -1,9 +1,3 @@
-# Data files (local development)
-data/schedule.json
-
-# Keep data directory but ignore schedule.json
-!data/.gitkeep
-
 # GitHub Pages will manage docs/data/schedule.json
 # Don't ignore docs/data/schedule.json as it's needed for deployment
 
