@@ -9,8 +9,12 @@ on:
         default: 'update-and-deploy'
         type: choice
         options:
-        - update-and-deploy
-        - deploy-only
+          - update-and-deploy
+          - deploy-only
+
+# 👇 Add this to give GITHUB_TOKEN push rights
+permissions:
+  contents: write
 
 jobs:
   update-and-deploy:
@@ -18,96 +22,95 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18'
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
 
-    - name: Create data directory
-      run: mkdir -p docs/data
+      - name: Create data directory
+        run: mkdir -p docs/data
 
-    - name: Run parser and generate schedule
-      run: |
-        node parser.js
-        # Verify schedule.json was created
-        if [ ! -f schedule.json ]; then
-          echo "Error: schedule.json was not created"
-          exit 1
-        fi
-        # Copy generated schedule to docs folder for GitHub Pages
-        cp schedule.json docs/data/schedule.json
-        # Copy index.html if it exists in root, otherwise use the one in docs
-        if [ -f index.html ]; then
-          cp index.html docs/index.html
-        fi
+      - name: Run parser and generate schedule
+        run: |
+          node parser.js
+          # Verify schedule.json was created
+          if [ ! -f schedule.json ]; then
+            echo "Error: schedule.json was not created"
+            exit 1
+          fi
+          # Copy generated schedule to docs folder for GitHub Pages
+          cp schedule.json docs/data/schedule.json
+          # Copy index.html if it exists in root, otherwise use the one in docs
+          if [ -f index.html ]; then
+            cp index.html docs/index.html
+          fi
 
-    - name: Check for changes
-      id: git-check
-      run: |
-        git add docs/ schedule.json
-        if git diff --cached --quiet; then
-          echo "No changes to commit"
-          echo "changed=false" >> $GITHUB_OUTPUT
-        else
-          echo "Changes detected"
-          echo "changed=true" >> $GITHUB_OUTPUT
-        fi
+      - name: Check for changes
+        id: git-check
+        run: |
+          git add docs/ schedule.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "Changes detected"
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
 
-    - name: Commit and push if changed
-      if: steps.git-check.outputs.changed == 'true'
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git commit -m "🤖 Auto-update competition schedule - $(date -u '+%Y-%m-%d %H:%M UTC')"
-        git push
+      - name: Commit and push if changed
+        if: steps.git-check.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "🤖 Auto-update competition schedule - $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
 
   deploy-only:
     if: github.event.inputs.action == 'deploy-only'
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Create data directory
-      run: mkdir -p docs/data
+      - name: Create data directory
+        run: mkdir -p docs/data
 
-    - name: Copy existing files to docs
-      run: |
-        # Copy existing schedule.json to docs folder if it exists
-        if [ -f schedule.json ]; then
-          cp schedule.json docs/data/schedule.json
-        else
-          echo "Warning: No schedule.json found in root"
-        fi
-        # Copy index.html if it exists in root, otherwise use the one in docs
-        if [ -f index.html ]; then
-          cp index.html docs/index.html
-        fi
+      - name: Copy existing files to docs
+        run: |
+          # Copy existing schedule.json to docs folder if it exists
+          if [ -f schedule.json ]; then
+            cp schedule.json docs/data/schedule.json
+          else
+            echo "Warning: No schedule.json found in root"
+          fi
+          # Copy index.html if it exists in root, otherwise use the one in docs
+          if [ -f index.html ]; then
+            cp index.html docs/index.html
+          fi
 
-    - name: Check for changes
-      id: git-check
-      run: |
-        git add docs/
-        if git diff --cached --quiet; then
-          echo "No changes to commit"
-          echo "changed=false" >> $GITHUB_OUTPUT
-        else
-          echo "Changes detected"
-          echo "changed=true" >> $GITHUB_OUTPUT
-        fi
+      - name: Check for changes
+        id: git-check
+        run: |
+          git add docs/
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "Changes detected"
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
 
-    - name: Commit and push if changed
-      if: steps.git-check.outputs.changed == 'true'
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git commit -m "🤖 Deploy website files - $(date -u '+%Y-%m-%d %H:%M UTC')"
-        git push
-
+      - name: Commit and push if changed
+        if: steps.git-check.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "🤖 Deploy website files - $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
