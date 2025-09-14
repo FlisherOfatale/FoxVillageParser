@@ -157,6 +157,30 @@
             color: #2c3e50;
         }
 
+        .rider-link {
+            color: #2c3e50;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .rider-link:hover {
+            color: #3498db;
+            text-decoration: underline;
+        }
+
+        .ring-link {
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .ring-link:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
         .class-column {
             color: #7f8c8d;
             max-width: 300px;
@@ -315,8 +339,34 @@
         if (ring === 'Ring 2') return '#3498db'; // Blue
         if (ring === 'Ring 3') return '#2ecc71'; // Green
         if (ring === 'Ring 4') return '#f39c12'; // Orange
-        if (ring === 'Combine Obstacle') return '#9b59b6'; // Purple
+        if (ring === 'Combiné') return '#9b59b6'; // Purple
         return '#34495e'; // Default gray
+    }
+
+    // Handle rider name click
+    function handleRiderClick(riderName) {
+        // Set the rider filter
+        const riderSelect = document.getElementById('rider-filter');
+        if (riderSelect) {
+            riderSelect.value = riderName;
+        }
+
+        // Switch to riders tab and filter
+        showTab('riders');
+        filterByRider();
+    }
+
+    // Handle ring click
+    function handleRingClick(ringName) {
+        // Set the ring filter
+        const ringSelect = document.getElementById('ring-filter');
+        if (ringSelect) {
+            ringSelect.value = ringName;
+        }
+
+        // Switch to rings tab and filter
+        showTab('rings');
+        filterByRing();
     }
 
     // Load schedule data with cache busting
@@ -598,9 +648,9 @@
             html += `
                     <tr>
                         <td class="time-column">${item.time}</td>
-                        <td class="rider-column">${item.rider_name}</td>
+                        <td class="rider-column"><a href="#" class="rider-link" onclick="handleRiderClick('${item.rider_name.replace(/'/g, "\\'")}')"; return false;">${item.rider_name}</a></td>
                         <td class="class-column">${item.class}</td>
-                        <td style="background-color: ${ringColor}; color: white; text-align: center; border-radius: 3px; font-weight: bold; padding: 4px 8px;">${item.ring}</td>
+                        <td style="background-color: ${ringColor}; color: white; text-align: center; border-radius: 3px; font-weight: bold; padding: 4px 8px;"><a href="#" class="ring-link" onclick="handleRingClick('${item.ring.replace(/'/g, "\\'")}')"; return false;">${item.ring}</a></td>
                     </tr>
                 `;
         });

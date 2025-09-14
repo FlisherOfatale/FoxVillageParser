@@ -14,7 +14,7 @@ The project consists of:
 - **config.json** - Configuration file containing showId and rider names
 - **index.html** - Web interface for displaying competition schedules with French translations
 - **samples/** - Sample API response files for development/testing
-- **schedule_v1.json** - Generated output file containing parsed rider schedules
+- **schedule.json** - Generated output file containing parsed rider schedules
 
 ### Data Flow
 
@@ -33,10 +33,10 @@ The project consists of:
 npm start
 
 # Run parser with specific rider names
-node parser.js "Champagne, Chloé" "Charbonneau, Emma"
+node parser.js 
 
 # View generated schedule
-cat schedule_v1.json
+cat schedule.json
 ```
 
 ## Configuration

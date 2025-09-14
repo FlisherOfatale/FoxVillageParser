@@ -42,6 +42,14 @@ function formatTime(timeString) {
     return time.toTimeString().slice(0, 5); // HH:MM
 }
 
+// Normalize ring names
+function normalizeRingName(ringName) {
+    if (ringName === 'Combine Obstacle') {
+        return 'Combiné';
+    }
+    return ringName;
+}
+
 // Extract class number from HTML
 function extractClassNumber(htmlString) {
     const match = htmlString.match(/>(\d+)</);
@@ -171,7 +179,7 @@ function extractRiderSchedule(riderInfo, rawData, classLookup) {
                 rider_name: riderInfo.originalName,
                 rider_id: riderInfo.riderID,
                 class: formattedClass,
-                ring: entry.ring,
+                ring: normalizeRingName(entry.ring),
                 day: getFrenchDay(entry.day),
                 time: formatTime(entry.rideTime)
             });
