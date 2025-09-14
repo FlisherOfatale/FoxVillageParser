@@ -30,7 +30,7 @@ jobs:
       run: |
         node parser.js
         # Copy generated schedule to docs folder for GitHub Pages
-        cp data/schedule.json docs/data/schedule.json
+        cp schedule.json docs/data/schedule.json
 
     - name: Check for changes
       id: git-check
