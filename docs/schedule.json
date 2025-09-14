@@ -2,7 +2,7 @@
   {
     "rider_name": "Champagne, Chloé",
     "rider_id": 536,
-    "class": "Entrainement 1",
+    "class": "1151 - Entrainement 1",
     "ring": "Ring 4",
     "day": "Vendredi",
     "time": "14:28"
@@ -10,7 +10,7 @@
   {
     "rider_name": "Champagne, Chloé",
     "rider_id": 536,
-    "class": "Entrainement 2",
+    "class": "1152 - Entrainement 2",
     "ring": "Ring 4",
     "day": "Samedi",
     "time": "09:06"
@@ -18,7 +18,7 @@
   {
     "rider_name": "Champagne, Chloé",
     "rider_id": 536,
-    "class": "Entrainement 3",
+    "class": "1153 - Entrainement 3",
     "ring": "Ring 4",
     "day": "Dimanche",
     "time": "09:18"
@@ -26,7 +26,7 @@
   {
     "rider_name": "Charbonneau, Emma",
     "rider_id": 535,
-    "class": "Initiation A",
+    "class": "1101 - Initiation A",
     "ring": "Ring 3",
     "day": "Vendredi",
     "time": "08:13"
@@ -34,7 +34,7 @@
   {
     "rider_name": "Charbonneau, Emma",
     "rider_id": 535,
-    "class": "Dressage Combiné",
+    "class": "500 - Dressage Combiné",
     "ring": "Ring 4",
     "day": "Vendredi",
     "time": "10:01"
@@ -42,7 +42,7 @@
   {
     "rider_name": "Charbonneau, Emma",
     "rider_id": 535,
-    "class": "Initiation B",
+    "class": "1102 - Initiation B",
     "ring": "Ring 2",
     "day": "Samedi",
     "time": "09:24"
@@ -58,7 +58,7 @@
   {
     "rider_name": "Charbonneau, Emma",
     "rider_id": 535,
-    "class": "Initiation C",
+    "class": "1103 - Initiation C",
     "ring": "Ring 2",
     "day": "Dimanche",
     "time": "08:06"
@@ -66,7 +66,7 @@
   {
     "rider_name": "Paquette, Coralie",
     "rider_id": 542,
-    "class": "Dressage Combiné",
+    "class": "500 - Dressage Combiné",
     "ring": "Ring 4",
     "day": "Vendredi",
     "time": "11:07"
@@ -74,7 +74,7 @@
   {
     "rider_name": "Paquette, Coralie",
     "rider_id": 542,
-    "class": "Entrainement 1",
+    "class": "1155 - Entrainement 1",
     "ring": "Ring 2",
     "day": "Vendredi",
     "time": "14:00"
@@ -82,7 +82,7 @@
   {
     "rider_name": "Paquette, Coralie",
     "rider_id": 542,
-    "class": "Entrainement 2",
+    "class": "1156 - Entrainement 2",
     "ring": "Ring 2",
     "day": "Samedi",
     "time": "11:45"
@@ -98,7 +98,7 @@
   {
     "rider_name": "Paquette, Coralie",
     "rider_id": 542,
-    "class": "Entrainement 3",
+    "class": "1157 - Entrainement 3",
     "ring": "Ring 2",
     "day": "Dimanche",
     "time": "13:30"
@@ -106,7 +106,7 @@
   {
     "rider_name": "Dupasquier, Coralie",
     "rider_id": 1377,
-    "class": "Dressage Combiné",
+    "class": "505 - Dressage Combiné",
     "ring": "Ring 4",
     "day": "Vendredi",
     "time": "15:07"
@@ -122,7 +122,7 @@
   {
     "rider_name": "Duquette, Emma-Florence",
     "rider_id": 541,
-    "class": "Entrainement 1",
+    "class": "1155 - Entrainement 1",
     "ring": "Ring 2",
     "day": "Vendredi",
     "time": "14:17"
@@ -130,7 +130,7 @@
   {
     "rider_name": "Duquette, Emma-Florence",
     "rider_id": 541,
-    "class": "Kur",
+    "class": "1450 - Kur",
     "ring": "Ring 1",
     "day": "Vendredi",
     "time": "17:20"
@@ -138,7 +138,7 @@
   {
     "rider_name": "Duquette, Emma-Florence",
     "rider_id": 541,
-    "class": "Entrainement 2",
+    "class": "1156 - Entrainement 2",
     "ring": "Ring 2",
     "day": "Samedi",
     "time": "13:54"
@@ -146,7 +146,7 @@
   {
     "rider_name": "Duquette, Emma-Florence",
     "rider_id": 541,
-    "class": "Entrainement 3",
+    "class": "1157 - Entrainement 3",
     "ring": "Ring 2",
     "day": "Dimanche",
     "time": "12:36"
@@ -154,7 +154,7 @@
   {
     "rider_name": "Burns, Lilianne",
     "rider_id": 532,
-    "class": "Dressage Combiné",
+    "class": "500 - Dressage Combiné",
     "ring": "Ring 4",
     "day": "Vendredi",
     "time": "09:55"
@@ -170,7 +170,7 @@
   {
     "rider_name": "Cron, Juliette",
     "rider_id": 922,
-    "class": "Initiation A",
+    "class": "1105 - Initiation A",
     "ring": "Ring 2",
     "day": "Vendredi",
     "time": "09:01"
@@ -178,7 +178,7 @@
   {
     "rider_name": "Cron, Juliette",
     "rider_id": 922,
-    "class": "Initiation B",
+    "class": "1106 - Initiation B",
     "ring": "Ring 2",
     "day": "Samedi",
     "time": "10:34"
@@ -186,7 +186,7 @@
   {
     "rider_name": "Cron, Juliette",
     "rider_id": 922,
-    "class": "Initiation C",
+    "class": "1107 - Initiation C",
     "ring": "Ring 2",
     "day": "Dimanche",
     "time": "10:34"
@@ -194,7 +194,7 @@
   {
     "rider_name": "Lavie, Camille",
     "rider_id": 1206,
-    "class": "525 - EC Eventing 85 - Test 2",
+    "class": "525 - Dressage Combiné",
     "ring": "Ring 2",
     "day": "Vendredi",
     "time": "14:51"
@@ -210,7 +210,7 @@
   {
     "rider_name": "Sicotte, Simon-Pierre",
     "rider_id": 960,
-    "class": "Initiation A",
+    "class": "1101 - Initiation A",
     "ring": "Ring 3",
     "day": "Vendredi",
     "time": "08:43"
@@ -218,7 +218,7 @@
   {
     "rider_name": "Sicotte, Simon-Pierre",
     "rider_id": 960,
-    "class": "Initiation B",
+    "class": "1102 - Initiation B",
     "ring": "Ring 2",
     "day": "Samedi",
     "time": "09:06"
@@ -226,7 +226,7 @@
   {
     "rider_name": "Sicotte, Simon-Pierre",
     "rider_id": 960,
-    "class": "Initiation C",
+    "class": "1103 - Initiation C",
     "ring": "Ring 2",
     "day": "Dimanche",
     "time": "08:12"
