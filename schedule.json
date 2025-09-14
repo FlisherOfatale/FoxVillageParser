@@ -1,0 +1,234 @@
+[
+  {
+    "rider_name": "Champagne, Chloé",
+    "rider_id": 536,
+    "class": "1151 - USEF Training Level, Test 1 2023 - JR/YR",
+    "ring": "Ring 4",
+    "day": "Vendredi",
+    "time": "14:28"
+  },
+  {
+    "rider_name": "Champagne, Chloé",
+    "rider_id": 536,
+    "class": "1152 - USEF Training Level, Test 2 2023 - JR/YR",
+    "ring": "Ring 4",
+    "day": "Samedi",
+    "time": "09:06"
+  },
+  {
+    "rider_name": "Champagne, Chloé",
+    "rider_id": 536,
+    "class": "1153 - USEF Training Level, Test 3 2023 - JR/YR",
+    "ring": "Ring 4",
+    "day": "Dimanche",
+    "time": "09:18"
+  },
+  {
+    "rider_name": "Charbonneau, Emma",
+    "rider_id": 535,
+    "class": "1101 - USDF Introductory Level, Test A 2023 - JR/YR",
+    "ring": "Ring 3",
+    "day": "Vendredi",
+    "time": "08:13"
+  },
+  {
+    "rider_name": "Charbonneau, Emma",
+    "rider_id": 535,
+    "class": "500 - EC ICE Eventing Dressage Test B - JR/YR",
+    "ring": "Ring 4",
+    "day": "Vendredi",
+    "time": "10:01"
+  },
+  {
+    "rider_name": "Charbonneau, Emma",
+    "rider_id": 535,
+    "class": "1102 - USDF Introductory Level, Test B 2023 - JR/YR",
+    "ring": "Ring 2",
+    "day": "Samedi",
+    "time": "09:24"
+  },
+  {
+    "rider_name": "Charbonneau, Emma",
+    "rider_id": 535,
+    "class": "501 - Combinee obstacle - JR/YR",
+    "ring": "Combiné",
+    "day": "Samedi",
+    "time": "14:29"
+  },
+  {
+    "rider_name": "Charbonneau, Emma",
+    "rider_id": 535,
+    "class": "1103 - USDF Introductory Level, Test C 2023 - JR/YR",
+    "ring": "Ring 2",
+    "day": "Dimanche",
+    "time": "08:06"
+  },
+  {
+    "rider_name": "Paquette, Coralie",
+    "rider_id": 542,
+    "class": "500 - EC ICE Eventing Dressage Test B - JR/YR",
+    "ring": "Ring 4",
+    "day": "Vendredi",
+    "time": "11:07"
+  },
+  {
+    "rider_name": "Paquette, Coralie",
+    "rider_id": 542,
+    "class": "1155 - USEF Training Level, Test 1 2023 - JR/YR",
+    "ring": "Ring 2",
+    "day": "Vendredi",
+    "time": "14:00"
+  },
+  {
+    "rider_name": "Paquette, Coralie",
+    "rider_id": 542,
+    "class": "1156 - USEF Training Level, Test 2 2023 - JR/YR",
+    "ring": "Ring 2",
+    "day": "Samedi",
+    "time": "11:45"
+  },
+  {
+    "rider_name": "Paquette, Coralie",
+    "rider_id": 542,
+    "class": "501 - Combinee obstacle - JR/YR",
+    "ring": "Combiné",
+    "day": "Samedi",
+    "time": "14:35"
+  },
+  {
+    "rider_name": "Paquette, Coralie",
+    "rider_id": 542,
+    "class": "1157 - USEF Training Level, Test 3 2023 - JR/YR",
+    "ring": "Ring 2",
+    "day": "Dimanche",
+    "time": "13:30"
+  },
+  {
+    "rider_name": "Dupasquier, Coralie",
+    "rider_id": 1377,
+    "class": "505 - EC ICE Eventing Dressage Test B - No",
+    "ring": "Ring 4",
+    "day": "Vendredi",
+    "time": "15:07"
+  },
+  {
+    "rider_name": "Dupasquier, Coralie",
+    "rider_id": 1377,
+    "class": "506 - Combinee obstacle - No",
+    "ring": "Combiné",
+    "day": "Samedi",
+    "time": "13:55"
+  },
+  {
+    "rider_name": "Duquette, Emma-Florence",
+    "rider_id": 541,
+    "class": "1155 - USEF Training Level, Test 1 2023 - JR/YR",
+    "ring": "Ring 2",
+    "day": "Vendredi",
+    "time": "14:17"
+  },
+  {
+    "rider_name": "Duquette, Emma-Florence",
+    "rider_id": 541,
+    "class": "1450 - USDF Freestyle, Training Level 2023 - JR/YR",
+    "ring": "Ring 1",
+    "day": "Vendredi",
+    "time": "17:20"
+  },
+  {
+    "rider_name": "Duquette, Emma-Florence",
+    "rider_id": 541,
+    "class": "1156 - USEF Training Level, Test 2 2023 - JR/YR",
+    "ring": "Ring 2",
+    "day": "Samedi",
+    "time": "13:54"
+  },
+  {
+    "rider_name": "Duquette, Emma-Florence",
+    "rider_id": 541,
+    "class": "1157 - USEF Training Level, Test 3 2023 - JR/YR",
+    "ring": "Ring 2",
+    "day": "Dimanche",
+    "time": "12:36"
+  },
+  {
+    "rider_name": "Burns, Lilianne",
+    "rider_id": 532,
+    "class": "500 - EC ICE Eventing Dressage Test B - No",
+    "ring": "Ring 4",
+    "day": "Vendredi",
+    "time": "09:55"
+  },
+  {
+    "rider_name": "Burns, Lilianne",
+    "rider_id": 532,
+    "class": "501 - Combinee obstacle - No",
+    "ring": "Combiné",
+    "day": "Samedi",
+    "time": "15:05"
+  },
+  {
+    "rider_name": "Cron, Juliette",
+    "rider_id": 922,
+    "class": "1105 - USDF Introductory Level, Test A 2023 - JR/YR",
+    "ring": "Ring 2",
+    "day": "Vendredi",
+    "time": "09:01"
+  },
+  {
+    "rider_name": "Cron, Juliette",
+    "rider_id": 922,
+    "class": "1106 - USDF Introductory Level, Test B 2023 - JR/YR",
+    "ring": "Ring 2",
+    "day": "Samedi",
+    "time": "10:34"
+  },
+  {
+    "rider_name": "Cron, Juliette",
+    "rider_id": 922,
+    "class": "1107 - USDF Introductory Level, Test C 2023 - JR/YR",
+    "ring": "Ring 2",
+    "day": "Dimanche",
+    "time": "10:34"
+  },
+  {
+    "rider_name": "Lavie, Camille",
+    "rider_id": 1206,
+    "class": "525 - EC Eventing 85 - Test 2 - Adult Amateur",
+    "ring": "Ring 2",
+    "day": "Vendredi",
+    "time": "14:51"
+  },
+  {
+    "rider_name": "Lavie, Camille",
+    "rider_id": 1206,
+    "class": "526 - Combinee obstacle - Adult Amateur",
+    "ring": "Combiné",
+    "day": "Samedi",
+    "time": "11:57"
+  },
+  {
+    "rider_name": "Sicotte, Simon-Pierre",
+    "rider_id": 960,
+    "class": "1101 - USDF Introductory Level, Test A 2023 - JR/YR",
+    "ring": "Ring 3",
+    "day": "Vendredi",
+    "time": "08:43"
+  },
+  {
+    "rider_name": "Sicotte, Simon-Pierre",
+    "rider_id": 960,
+    "class": "1102 - USDF Introductory Level, Test B 2023 - JR/YR",
+    "ring": "Ring 2",
+    "day": "Samedi",
+    "time": "09:06"
+  },
+  {
+    "rider_name": "Sicotte, Simon-Pierre",
+    "rider_id": 960,
+    "class": "1103 - USDF Introductory Level, Test C 2023 - JR/YR",
+    "ring": "Ring 2",
+    "day": "Dimanche",
+    "time": "08:12"
+  }
+]
