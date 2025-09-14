@@ -29,20 +29,21 @@ jobs:
     - name: Run parser and generate schedule
       run: |
         node parser.js
-        # Copy generated schedule to docs folder for GitHub Pages
+        # Copy generated schedule and updated index.html to docs folder for GitHub Pages
         cp schedule.json docs/data/schedule.json
+        cp index.html docs/index.html 2>/dev/null || true
 
     - name: Check for changes
       id: git-check
       run: |
-        git diff --exit-code docs/data/schedule.json || echo "changed=true" >> $GITHUB_OUTPUT
+        git diff --exit-code docs/ || echo "changed=true" >> $GITHUB_OUTPUT
 
     - name: Commit and push if changed
       if: steps.git-check.outputs.changed == 'true'
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add docs/data/schedule.json
+        git add docs/
         git commit -m "🤖 Auto-update competition schedule - $(date -u '+%Y-%m-%d %H:%M UTC')"
         git push
 
