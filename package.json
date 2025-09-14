@@ -1,0 +1,20 @@
+{
+"name": "foxvillage-parser",
+"version": "1.0.0",
+"description": "Simple parser for equestrian competition data from FoxVillage",
+"main": "parser.js",
+"scripts": {
+"start": "node parser.js"
+},
+"keywords": [
+"equestrian",
+"competition",
+"parser",
+"foxvillage"
+],
+"author": "",
+"license": "MIT",
+"engines": {
+"node": ">=14.0.0"
+}
+}

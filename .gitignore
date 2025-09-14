@@ -1,0 +1,8 @@
+# Data files
+schedule.json
+
+# Keep data directory but ignore schedule.json
+!data/.gitkeep
+
+# Ignore Webstorm Profile
+.idea
