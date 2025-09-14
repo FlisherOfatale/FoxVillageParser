@@ -182,7 +182,7 @@ function extractRiderSchedule(riderInfo, rawData, classLookup, classMapping = {}
     if (rawData.riderPageData && Array.isArray(rawData.riderPageData)) {
         for (const entry of rawData.riderPageData) {
             const classId = extractClassNumber(entry.classText);
-            const formattedClass = formatClassString(classId, entry.test, entry.statDiv, classLookup, classMapping);
+            const formattedClass = formatClassString(classId, entry.test, classLookup, classMapping);
 
             schedule.push({
                 rider_name: riderInfo.originalName,
