@@ -65,7 +65,8 @@ function loadConfig() {
         console.log('No config.json found, using defaults');
         return {
             showId: 11474,
-            riderNames: []
+            riderNames: [],
+            classMapping: {}
         };
     }
 }
@@ -142,7 +143,7 @@ function buildClassLookup(classData) {
 }
 
 // Format class string with detailed information
-function formatClassString(classId, test, statDiv, classLookup) {
+function formatClassString(classId, test, statDiv, classLookup, classMapping = {}) {
     let result = classId;
 
     // Add class details from lookup if available
@@ -163,17 +164,25 @@ function formatClassString(classId, test, statDiv, classLookup) {
         result += ' - ' + statDiv;
     }
 
+    // Apply class mapping if available
+    for (const [originalName, mappedName] of Object.entries(classMapping)) {
+        if (result.includes(originalName)) {
+            result = result.replace(originalName, mappedName);
+            break;
+        }
+    }
+
     return result;
 }
 
 // Extract filtered data from raw API response
-function extractRiderSchedule(riderInfo, rawData, classLookup) {
+function extractRiderSchedule(riderInfo, rawData, classLookup, classMapping = {}) {
     const schedule = [];
 
     if (rawData.riderPageData && Array.isArray(rawData.riderPageData)) {
         for (const entry of rawData.riderPageData) {
             const classId = extractClassNumber(entry.classText);
-            const formattedClass = formatClassString(classId, entry.test, entry.statDiv, classLookup);
+            const formattedClass = formatClassString(classId, entry.test, entry.statDiv, classLookup, classMapping);
 
             schedule.push({
                 rider_name: riderInfo.originalName,
@@ -196,6 +205,7 @@ async function parseRiders() {
         const config = loadConfig();
         const showId = config.showId || 11474;
         const riderNames = config.riderNames || [];
+        const classMapping = config.classMapping || {};
 
         if (riderNames.length === 0) {
             console.log('No rider names provided in config.json');
@@ -233,7 +243,7 @@ async function parseRiders() {
 
             try {
                 const scheduleData = await fetchUrl(url);
-                const riderSchedule = extractRiderSchedule(riderInfo, scheduleData, classLookup);
+                const riderSchedule = extractRiderSchedule(riderInfo, scheduleData, classLookup, classMapping);
                 allSchedules.push(...riderSchedule);
                 console.log(`Got ${riderSchedule.length} entries for: ${riderInfo.riderName}`);
             } catch (error) {

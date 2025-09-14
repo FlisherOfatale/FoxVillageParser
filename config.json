@@ -2,14 +2,17 @@
   "showId": 11474,
   "riderNames": [
     "Champagne, Chloé",
-    "Charbonneau, Emma",
-    "Paquette, Coralie",
-    "Dupasquier, Coralie",
-    "Duquette, Emma-Florence",
-    "Burns, Lilianne",
-    "Cron, Juliette",
-    "Lavie, Camille",
-    "Sicotte, Simon-Pierre",
-    "Fantasia"
-  ]
+    "Charbonneau, Emma"
+  ],
+  "classMapping": {
+    "USDF Introductory Level, Test A 2023": "Initiation A",
+    "USDF Introductory Level, Test B 2023": "Initiation B",
+    "USDF Introductory Level, Test C 2023": "Initiation C",
+    "EC ICE Eventing Dressage Test B": "Dressage Combiné",
+    "USEF Training Level, Test 1 2023": "Entrainement 1",
+    "USEF Training Level, Test 2 2023": "Entrainement 2",
+    "USEF Training Level, Test 3 2023": "Entrainement 3",
+    "EC Eventing 85 - Test 2 - Adult Amateur": "Dressage Combiné",
+    "USDF Freestyle, Training Level 2023": "Kur"
+  }
 }
