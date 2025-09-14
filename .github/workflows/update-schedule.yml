@@ -7,9 +7,6 @@ on:
   workflow_dispatch: # Allow manual triggering
   push:
     branches: [ main ]
-    paths:
-      - 'config.json'
-      - 'parser.js'
 
 jobs:
   update-schedule:
