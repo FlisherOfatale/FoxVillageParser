@@ -166,9 +166,9 @@ function formatClassString(classId, test, classLookup, classMapping = {}) {
         }
     }
 
-    // If we found a mapping, use it. Otherwise build the traditional string
+    // If we found a mapping, use it with class ID. Otherwise build the traditional string
     if (mappedName !== fullTestName) {
-        return mappedName;
+        return `${classId} - ${mappedName}`;
     }
 
     // Build traditional string
@@ -287,9 +287,6 @@ if (require.main === module) {
         .then(schedule => {
             console.log('\n=== SCHEDULE ===');
             console.log(JSON.stringify(schedule, null, 2));
-
-            // Save to files - both root and docs for local dev and deployment
-            fs.writeFileSync('schedule.json', JSON.stringify(schedule, null, 2));
 
             // Ensure docs directory exists
             if (!fs.existsSync('docs')) {
