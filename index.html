@@ -323,7 +323,7 @@
     async function loadSchedule() {
         try {
             const timestamp = new Date().getTime();
-            const response = await fetch(`./data/schedule.json?t=${timestamp}`);
+            const response = await fetch(`./schedule.json?t=${timestamp}`);
             scheduleData = await response.json();
 
             console.log('Loading real schedule data from schedule.json');
