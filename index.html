@@ -319,10 +319,11 @@
         return '#34495e'; // Default gray
     }
 
-    // Load schedule data
+    // Load schedule data with cache busting
     async function loadSchedule() {
         try {
-            const response = await fetch('./schedule.json');
+            const timestamp = new Date().getTime();
+            const response = await fetch(`./data/schedule.json?t=${timestamp}`);
             scheduleData = await response.json();
 
             console.log('Loading real schedule data from schedule.json');
@@ -338,67 +339,104 @@
             });
 
             populateFilters();
+            parseUrlParameters();
             showFullSchedule();
-            setDefaultDay();
 
         } catch (error) {
             console.error('Erreur lors du chargement:', error);
-            document.querySelector('.content').innerHTML = '<div class="no-data">Erreur: Impossible de charger schedule.json</div>';
+            document.querySelector('.content').innerHTML = '<div class="no-data">Erreur: Impossible de charger data/schedule.json</div>';
         }
     }
 
-    // Cookie functions
-    function setCookie(name, value, days) {
-        const expires = new Date();
-        expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
-        document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
+    // URL parameter functions
+    function getUrlParameters() {
+        const params = new URLSearchParams(window.location.search);
+        return {
+            tab: params.get('tab'),
+            rider: params.get('rider'),
+            day: params.get('day'),
+            ring: params.get('ring')
+        };
     }
 
-    function getCookie(name) {
-        const nameEQ = name + "=";
-        const ca = document.cookie.split(';');
-        for (let i = 0; i < ca.length; i++) {
-            let c = ca[i];
-            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    function updateUrl(params) {
+        const url = new URL(window.location);
+
+        // Clear all parameters first
+        url.searchParams.delete('tab');
+        url.searchParams.delete('rider');
+        url.searchParams.delete('day');
+        url.searchParams.delete('ring');
+
+        // Add new parameters
+        if (params.tab && params.tab !== 'schedule') {
+            url.searchParams.set('tab', params.tab);
         }
-        return null;
+        if (params.rider) {
+            url.searchParams.set('rider', params.rider);
+        }
+        if (params.day) {
+            url.searchParams.set('day', params.day);
+        }
+        if (params.ring) {
+            url.searchParams.set('ring', params.ring);
+        }
+
+        window.history.replaceState({}, '', url);
     }
 
-    // Set default day selection
-    function setDefaultDay() {
-        // Get saved preferences from cookies
-        const savedDay = getCookie('selectedDay');
-        const savedRider = getCookie('selectedRider');
+    function parseUrlParameters() {
+        const params = getUrlParameters();
 
-        if (savedDay && ['vendredi', 'samedi', 'dimanche'].includes(savedDay)) {
-            // Use saved day preference
-            document.getElementById('day-filter').value = savedDay;
-            filterByDay();
-            showTab('days');
-        } else if (savedRider) {
-            // Use saved rider preference
-            document.getElementById('rider-filter').value = savedRider;
-            filterByRider();
-            showTab('riders');
-        } else {
-            // Default to showing all days (no filter)
-            document.getElementById('day-filter').value = '';
-            showTab('schedule'); // Show complete schedule tab
+        // Set tab
+        if (params.tab && ['schedule', 'riders', 'rings', 'days'].includes(params.tab)) {
+            showTab(params.tab);
+        }
+
+        // Set rider filter
+        if (params.rider) {
+            const riderSelect = document.getElementById('rider-filter');
+            if (riderSelect) {
+                riderSelect.value = params.rider;
+                showTab('riders');
+                filterByRider();
+            }
+        }
+
+        // Set day filter
+        if (params.day && ['vendredi', 'samedi', 'dimanche'].includes(params.day)) {
+            const daySelect = document.getElementById('day-filter');
+            if (daySelect) {
+                daySelect.value = params.day;
+                showTab('days');
+                filterByDay();
+            }
+        }
+
+        // Set ring filter
+        if (params.ring) {
+            const ringSelect = document.getElementById('ring-filter');
+            if (ringSelect) {
+                ringSelect.value = params.ring;
+                showTab('rings');
+                filterByRing();
+            }
+        }
+
+        // If no parameters, show default
+        if (!params.tab && !params.rider && !params.day && !params.ring) {
+            showTab('schedule');
         }
     }
 
-    // Modified filter by day to save preference
+
+    // Filter by day with URL updating
     function filterByDay() {
         const selectedDay = document.getElementById('day-filter').value;
         const container = document.getElementById('day-schedule');
 
-        // Save the selection to cookie (even if empty)
-        if (selectedDay) {
-            setCookie('selectedDay', selectedDay, 30); // Save for 30 days
-            // Clear rider cookie when selecting a day
-            setCookie('selectedRider', '', -1);
-        }
+        // Update URL
+        updateUrl({ tab: 'days', day: selectedDay });
 
         if (!selectedDay) {
             showFullSchedule();
@@ -420,17 +458,13 @@
         }
     }
 
-    // Modified filter by rider to save preference
+    // Filter by rider with URL updating
     function filterByRider() {
         const selectedRider = document.getElementById('rider-filter').value;
         const container = document.getElementById('rider-schedule');
 
-        // Save the selection to cookie
-        if (selectedRider) {
-            setCookie('selectedRider', selectedRider, 30); // Save for 30 days
-            // Clear day cookie when selecting a rider
-            setCookie('selectedDay', '', -1);
-        }
+        // Update URL
+        updateUrl({ tab: 'riders', rider: selectedRider });
 
         if (!selectedRider) {
             container.innerHTML = '<div class="no-data">Sélectionnez un cavalier</div>';
@@ -479,7 +513,7 @@
         });
     }
 
-    // Show tab
+    // Show tab with URL updating
     function showTab(tabName) {
         // Hide all tabs
         document.querySelectorAll('.tab-content').forEach(tab => {
@@ -503,19 +537,37 @@
 
         currentTab = tabName;
 
+        // Update URL only for tab change (preserve existing filters)
+        const params = getUrlParameters();
+        params.tab = tabName;
+        if (tabName === 'schedule') {
+            // Clear filters when going to schedule tab
+            delete params.rider;
+            delete params.day;
+            delete params.ring;
+        }
+        updateUrl(params);
+
         // Load appropriate content
         switch(tabName) {
             case 'schedule':
                 showFullSchedule();
                 break;
             case 'riders':
-                filterByRider();
+                if (!params.rider) {
+                    document.getElementById('rider-schedule').innerHTML = '<div class="no-data">Sélectionnez un cavalier</div>';
+                }
                 break;
             case 'rings':
-                filterByRing();
+                if (!params.ring) {
+                    document.getElementById('ring-schedule').innerHTML = '<div class="no-data">Sélectionnez un ring</div>';
+                }
                 break;
             case 'days':
-                filterByDay();
+                if (!params.day) {
+                    showFullSchedule();
+                    document.getElementById('day-schedule').innerHTML = document.getElementById('full-schedule').innerHTML;
+                }
                 break;
         }
     }
@@ -578,39 +630,14 @@
         container.innerHTML = html || '<div class="no-data">Aucune donnée disponible</div>';
     }
 
-    // Filter by rider
-    function filterByRider() {
-        const selectedRider = document.getElementById('rider-filter').value;
-        const container = document.getElementById('rider-schedule');
 
-        if (!selectedRider) {
-            container.innerHTML = '<div class="no-data">Sélectionnez un cavalier</div>';
-            return;
-        }
-
-        const riderData = scheduleData.filter(item => item.rider_name === selectedRider);
-        const days = ['vendredi', 'samedi', 'dimanche'];
-        let html = '';
-
-        days.forEach(day => {
-            const dayData = riderData.filter(item => item.day.toLowerCase() === day);
-            if (dayData.length > 0) {
-                html += `
-                        <div class="day-section">
-                            <div class="day-header">${day.charAt(0).toUpperCase() + day.slice(1)} - ${selectedRider}</div>
-                            ${createScheduleTable(dayData)}
-                        </div>
-                    `;
-            }
-        });
-
-        container.innerHTML = html || '<div class="no-data">Aucune compétition pour ce cavalier</div>';
-    }
-
-    // Filter by ring
+    // Filter by ring with URL updating
     function filterByRing() {
         const selectedRing = document.getElementById('ring-filter').value;
         const container = document.getElementById('ring-schedule');
+
+        // Update URL
+        updateUrl({ tab: 'rings', ring: selectedRing });
 
         if (!selectedRing) {
             container.innerHTML = '<div class="no-data">Sélectionnez un ring</div>';
@@ -636,30 +663,6 @@
         container.innerHTML = html || '<div class="no-data">Aucune compétition pour ce ring</div>';
     }
 
-    // Filter by day
-    function filterByDay() {
-        const selectedDay = document.getElementById('day-filter').value;
-        const container = document.getElementById('day-schedule');
-
-        if (!selectedDay) {
-            showFullSchedule();
-            container.innerHTML = document.getElementById('full-schedule').innerHTML;
-            return;
-        }
-
-        const dayData = scheduleData.filter(item => item.day.toLowerCase() === selectedDay);
-
-        if (dayData.length > 0) {
-            container.innerHTML = `
-                    <div class="day-section">
-                        <div class="day-header">${selectedDay.charAt(0).toUpperCase() + selectedDay.slice(1)}</div>
-                        ${createScheduleTable(dayData)}
-                    </div>
-                `;
-        } else {
-            container.innerHTML = '<div class="no-data">Aucune compétition pour ce jour</div>';
-        }
-    }
 
     // Initialize
     document.addEventListener('DOMContentLoaded', loadSchedule);

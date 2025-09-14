@@ -6,3 +6,6 @@ schedule.json
 
 # Ignore Webstorm Profile
 .idea
+
+# Ignore ClaudeAI Profile
+.claude
