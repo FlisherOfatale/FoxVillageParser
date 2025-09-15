@@ -237,6 +237,23 @@
                 background: #333 !important;
                 -webkit-print-color-adjust: exact;
             }
+
+            .day-section {
+                page-break-before: always;
+                page-break-inside: avoid;
+            }
+
+            .day-section:first-child {
+                page-break-before: auto;
+            }
+
+            .schedule-table {
+                page-break-inside: auto;
+            }
+
+            .schedule-table tr {
+                page-break-inside: avoid;
+            }
         }
 
         @media (max-width: 768px) {
