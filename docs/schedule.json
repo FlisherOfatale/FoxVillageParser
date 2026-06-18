@@ -418,7 +418,7 @@
   {
     "rider_name": "Lavie, Camille",
     "rider_id": null,
-    "class": "H30 Amateur",
+    "class": "H30 Amateur *",
     "ring": "Combiné",
     "day": "Samedi",
     "time": "15:50"
@@ -426,7 +426,7 @@
   {
     "rider_name": "Dupasquier, Coralie",
     "rider_id": null,
-    "class": "H24 Amateur",
+    "class": "H24 Amateur *",
     "ring": "Combiné",
     "day": "Samedi",
     "time": "15:10"
@@ -434,7 +434,7 @@
   {
     "rider_name": "Burns, Lilianne",
     "rider_id": null,
-    "class": "H24 Junior",
+    "class": "H24 Junior *",
     "ring": "Combiné",
     "day": "Samedi",
     "time": "15:20"
@@ -442,7 +442,7 @@
   {
     "rider_name": "Paquette, Coralie",
     "rider_id": null,
-    "class": "H24 Junior",
+    "class": "H24 Junior *",
     "ring": "Combiné",
     "day": "Samedi",
     "time": "15:25"
@@ -450,7 +450,7 @@
   {
     "rider_name": "Cron, Juliette",
     "rider_id": null,
-    "class": "H18 Junior",
+    "class": "H18 Junior *",
     "ring": "Combiné",
     "day": "Samedi",
     "time": "15:40"
@@ -458,7 +458,7 @@
   {
     "rider_name": "Cron, Juliette",
     "rider_id": null,
-    "class": "Dressage H18 Junior*",
+    "class": "Dressage H18 Junior *",
     "ring": "RING 3",
     "day": "Samedi",
     "time": "08:00"
@@ -466,7 +466,7 @@
   {
     "rider_name": "Lafrance, Camille",
     "rider_id": null,
-    "class": "H18 Junior",
+    "class": "H18 Junior *",
     "ring": "Combiné",
     "day": "Samedi",
     "time": "15:45"
@@ -474,7 +474,7 @@
   {
     "rider_name": "Lafrance, Camille",
     "rider_id": null,
-    "class": "Dressage H18 Junior*",
+    "class": "Dressage H18 Junior *",
     "ring": "RING 3",
     "day": "Samedi",
     "time": "08:05"
@@ -482,7 +482,7 @@
   {
     "rider_name": "Fontaine, Audréanne",
     "rider_id": null,
-    "class": "H18 Ouvert",
+    "class": "H18 Ouvert *",
     "ring": "Combiné",
     "day": "Samedi",
     "time": "15:50"
@@ -490,7 +490,7 @@
   {
     "rider_name": "Fontaine, Audréanne",
     "rider_id": null,
-    "class": "Dressage H18 Ouvert*",
+    "class": "Dressage H18 Ouvert *",
     "ring": "RING 3",
     "day": "Samedi",
     "time": "07:55"
