@@ -150,5 +150,93 @@
     "ring": "RING 3",
     "day": "Dimanche",
     "time": "11:35"
+  },
+  {
+    "rider_name": "Dion-Monette, Félicia",
+    "rider_id": 113,
+    "class": "2005 - Training Level, Test 1",
+    "ring": "RING 3",
+    "day": "Samedi",
+    "time": "11:39"
+  },
+  {
+    "rider_name": "Dion-Monette, Félicia",
+    "rider_id": 113,
+    "class": "2006 - Training Level, Test 2",
+    "ring": "RING 1",
+    "day": "Samedi",
+    "time": "13:36"
+  },
+  {
+    "rider_name": "Dion-Monette, Félicia",
+    "rider_id": 113,
+    "class": "2007 - Training Level, Test 2",
+    "ring": "RING 2",
+    "day": "Dimanche",
+    "time": "08:51"
+  },
+  {
+    "rider_name": "Dion-Monette, Félicia",
+    "rider_id": 113,
+    "class": "2008 - Training Level, Test 3",
+    "ring": "RING 3",
+    "day": "Dimanche",
+    "time": "13:48"
+  },
+  {
+    "rider_name": "Roy, Julie",
+    "rider_id": 75,
+    "class": "353 - Training Level, Test 3",
+    "ring": "RING 1",
+    "day": "Samedi",
+    "time": "14:36"
+  },
+  {
+    "rider_name": "Roy, Julie",
+    "rider_id": 75,
+    "class": "356 - Training Level, Test 3",
+    "ring": "RING 1",
+    "day": "Dimanche",
+    "time": "08:09"
+  },
+  {
+    "rider_name": "Roy, Julie",
+    "rider_id": 75,
+    "class": "358 - Training Level, Test 1",
+    "ring": "RING 1",
+    "day": "Dimanche",
+    "time": "08:22"
+  },
+  {
+    "rider_name": "Fontaine, Audréanne",
+    "rider_id": 79,
+    "class": "1112 - H18 Épreuves Combinées",
+    "ring": "RING 3",
+    "day": "Samedi",
+    "time": "07:55"
+  },
+  {
+    "rider_name": "Fontaine, Audréanne",
+    "rider_id": 79,
+    "class": "333 - Third Level, Test 3",
+    "ring": "RING 2",
+    "day": "Samedi",
+    "time": "10:14"
+  },
+  {
+    "rider_name": "Fontaine, Audréanne",
+    "rider_id": 79,
+    "class": "430 - USDF Freestyle, Third Level",
+    "ring": "RING 1",
+    "day": "Samedi",
+    "time": "16:47"
+  },
+  {
+    "rider_name": "Fontaine, Audréanne",
+    "rider_id": 79,
+    "class": "336 - Third Level, Test 3",
+    "ring": "RING 1",
+    "day": "Dimanche",
+    "time": "08:36"
   }
 ]
