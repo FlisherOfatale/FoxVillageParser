@@ -1,24 +1,13 @@
-name: Competition Schedule Actions
+name: Update Competition Schedule
 
 on:
   workflow_dispatch:
-    inputs:
-      action:
-        description: 'Action to perform'
-        required: true
-        default: 'update-and-deploy'
-        type: choice
-        options:
-          - update-and-deploy
-          - deploy-only
 
-# 👇 Add this to give GITHUB_TOKEN push rights
 permissions:
   contents: write
 
 jobs:
-  update-and-deploy:
-    if: github.event.inputs.action == 'update-and-deploy'
+  update:
     runs-on: ubuntu-latest
 
     steps:
@@ -32,71 +21,24 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Run parser and generate schedule
+      - name: Run parser
+        run: node parser.js
+
+      - name: Verify output
         run: |
-          node parser.js
-          # Verify schedule.json files were created
-          if [ ! -f schedule.json ] || [ ! -f docs/schedule.json ]; then
-            echo "Error: schedule.json files were not created"
+          if [ ! -f docs/schedule.json ]; then
+            echo "Error: docs/schedule.json was not created"
             exit 1
           fi
 
-      - name: Check for changes
-        id: git-check
+      - name: Commit and push if changed
         run: |
           git add docs/ schedule.json
           if git diff --cached --quiet; then
             echo "No changes to commit"
-            echo "changed=false" >> $GITHUB_OUTPUT
           else
-            echo "Changes detected"
-            echo "changed=true" >> $GITHUB_OUTPUT
+            git config --local user.email "github-actions[bot]@users.noreply.github.com"
+            git config --local user.name "github-actions[bot]"
+            git commit -m "🤖 Auto-update competition schedule - $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git push
           fi
-
-      - name: Commit and push if changed
-        if: steps.git-check.outputs.changed == 'true'
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git commit -m "🤖 Auto-update competition schedule - $(date -u '+%Y-%m-%d %H:%M UTC')"
-          git push
-
-  deploy-only:
-    if: github.event.inputs.action == 'deploy-only'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Verify existing files
-        run: |
-          # Verify schedule.json exists in both locations
-          if [ ! -f schedule.json ] || [ ! -f docs/schedule.json ]; then
-            echo "Warning: schedule.json not found in expected locations"
-          fi
-          # Verify index.html exists in docs
-          if [ ! -f docs/index.html ]; then
-            echo "Warning: docs/index.html not found"
-          fi
-
-      - name: Check for changes
-        id: git-check
-        run: |
-          git add docs/
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-            echo "changed=false" >> $GITHUB_OUTPUT
-          else
-            echo "Changes detected"
-            echo "changed=true" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Commit and push if changed
-        if: steps.git-check.outputs.changed == 'true'
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git commit -m "🤖 Deploy website files - $(date -u '+%Y-%m-%d %H:%M UTC')"
-          git push
