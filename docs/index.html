@@ -247,6 +247,11 @@
                 page-break-before: auto;
             }
 
+            body.printing-single-rider .day-section {
+                page-break-before: auto;
+                page-break-inside: avoid;
+            }
+
             .schedule-table {
                 page-break-inside: auto;
             }
@@ -310,7 +315,7 @@
                     <select id="rider-filter" onchange="filterByRider()">
                         <option value="">Tous les cavaliers</option>
                     </select>
-                    <button class="print-btn" onclick="window.print()">Imprimer</button>
+                    <button class="print-btn" onclick="printRider()">Imprimer</button>
                 </div>
             </div>
             <div id="rider-schedule"></div>
@@ -744,6 +749,15 @@
         container.innerHTML = html || '<div class="no-data">Aucune compétition pour ce ring</div>';
     }
 
+
+    function printRider() {
+        const selectedRider = document.getElementById('rider-filter').value;
+        if (selectedRider) {
+            document.body.classList.add('printing-single-rider');
+        }
+        window.print();
+        document.body.classList.remove('printing-single-rider');
+    }
 
     // Initialize
     document.addEventListener('DOMContentLoaded', loadSchedule);
