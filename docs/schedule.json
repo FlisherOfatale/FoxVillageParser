@@ -424,26 +424,12 @@
     "time": "15:50"
   },
   {
-    "rider_name": "Lavie, Camille",
-    "rider_id": null,
-    "ring": "RING 3",
-    "day": "Samedi",
-    "time": "08:26"
-  },
-  {
     "rider_name": "Dupasquier, Coralie",
     "rider_id": null,
     "class": "H24 Amateur",
     "ring": "Combiné",
     "day": "Samedi",
     "time": "15:10"
-  },
-  {
-    "rider_name": "Dupasquier, Coralie",
-    "rider_id": null,
-    "ring": "RING 3",
-    "day": "Samedi",
-    "time": "08:15"
   },
   {
     "rider_name": "Burns, Lilianne",
@@ -454,26 +440,12 @@
     "time": "15:20"
   },
   {
-    "rider_name": "Burns, Lilianne",
-    "rider_id": null,
-    "ring": "Combiné",
-    "day": "Samedi",
-    "time": "08:57"
-  },
-  {
     "rider_name": "Paquette, Coralie",
     "rider_id": null,
     "class": "H24 Junior",
     "ring": "Combiné",
     "day": "Samedi",
     "time": "15:25"
-  },
-  {
-    "rider_name": "Paquette, Coralie",
-    "rider_id": null,
-    "ring": "Combiné",
-    "day": "Samedi",
-    "time": "08:52"
   },
   {
     "rider_name": "Cron, Juliette",
