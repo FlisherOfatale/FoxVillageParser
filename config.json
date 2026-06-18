@@ -19,20 +19,16 @@
   ],
   "manualEntries": {
     "Lavie, Camille": [
-      { "class": "H30 Amateur", "ring": "Combiné", "day": "Samedi", "time": "15:50" },
-      { "_class": "Dressage H30 Amateur*", "ring": "RING 3", "day": "Samedi", "time": "08:26" }
+      { "class": "H30 Amateur", "ring": "Combiné", "day": "Samedi", "time": "15:50" }
     ],
     "Dupasquier, Coralie": [
-      { "class": "H24 Amateur", "ring": "Combiné", "day": "Samedi", "time": "15:10" },
-      { "_class": "Dressage H24 Amateur*", "ring": "RING 3", "day": "Samedi", "time": "08:15" }
+      { "class": "H24 Amateur", "ring": "Combiné", "day": "Samedi", "time": "15:10" }
     ],    
     "Burns, Lilianne": [
-      { "class": "H24 Junior", "ring": "Combiné", "day": "Samedi", "time": "15:20" },
-      { "_class": "Dresage - H24 Junior*", "ring": "Combiné", "day": "Samedi", "time": "08:57" }
+      { "class": "H24 Junior", "ring": "Combiné", "day": "Samedi", "time": "15:20" }
     ],    
     "Paquette, Coralie": [
-      { "class": "H24 Junior", "ring": "Combiné", "day": "Samedi", "time": "15:25" },
-      { "_class": "Dresage - H24 Junior*", "ring": "Combiné", "day": "Samedi", "time": "08:52" }
+      { "class": "H24 Junior", "ring": "Combiné", "day": "Samedi", "time": "15:25" }
     ],
     "Cron, Juliette": [
       { "class": "H18 Junior", "ring": "Combiné", "day": "Samedi", "time": "15:40" },
