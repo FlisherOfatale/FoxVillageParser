@@ -20,31 +20,31 @@
   "manualEntries": {
     "Lavie, Camille": [
       { "class": "H30 Amateur", "ring": "Combiné", "day": "Samedi", "time": "15:50" },
-      { "class": "Dressage H30 Amateur", "ring": "RING 3", "day": "Samedi", "time": "08:26" }
+      { "_class": "Dressage H30 Amateur*", "ring": "RING 3", "day": "Samedi", "time": "08:26" }
     ],
     "Dupasquier, Coralie": [
       { "class": "H24 Amateur", "ring": "Combiné", "day": "Samedi", "time": "15:10" },
-      { "class": "Dressage H24 Amateur", "ring": "RING 3", "day": "Samedi", "time": "08:15" }
+      { "_class": "Dressage H24 Amateur*", "ring": "RING 3", "day": "Samedi", "time": "08:15" }
     ],    
     "Burns, Lilianne": [
       { "class": "H24 Junior", "ring": "Combiné", "day": "Samedi", "time": "15:20" },
-      { "class": "Dresage - H24 Junior", "ring": "Combiné", "day": "Samedi", "time": "08:57" }
+      { "_class": "Dresage - H24 Junior*", "ring": "Combiné", "day": "Samedi", "time": "08:57" }
     ],    
     "Paquette, Coralie": [
       { "class": "H24 Junior", "ring": "Combiné", "day": "Samedi", "time": "15:25" },
-      { "class": "Dresage - H24 Junior", "ring": "Combiné", "day": "Samedi", "time": "08:52" }
+      { "_class": "Dresage - H24 Junior*", "ring": "Combiné", "day": "Samedi", "time": "08:52" }
     ],
     "Cron, Juliette": [
       { "class": "H18 Junior", "ring": "Combiné", "day": "Samedi", "time": "15:40" },
-      { "class": "Dressage H18 Junior", "ring": "RING 3", "day": "Samedi", "time": "08:00" }
+      { "class": "Dressage H18 Junior*", "ring": "RING 3", "day": "Samedi", "time": "08:00" }
     ],
     "Lafrance, Camille": [
       { "class": "H18 Junior", "ring": "Combiné", "day": "Samedi", "time": "15:45" },
-      { "class": "Dressage H18 Junior", "ring": "RING 3", "day": "Samedi", "time": "08:05" }
+      { "class": "Dressage H18 Junior*", "ring": "RING 3", "day": "Samedi", "time": "08:05" }
     ],
     "Fontaine, Audréanne": [
       { "class": "H18 Ouvert", "ring": "Combiné", "day": "Samedi", "time": "15:50" },
-      { "class": "Dressage H18 Ouvert", "ring": "RING 3", "day": "Samedi", "time": "07:55" }
+      { "class": "Dressage H18 Ouvert*", "ring": "RING 3", "day": "Samedi", "time": "07:55" }
     ]
   },
   "classMapping": {
