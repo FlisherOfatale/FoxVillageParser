@@ -326,5 +326,61 @@
     "ring": "RING 2",
     "day": "Dimanche",
     "time": "11:01"
+  },
+  {
+    "rider_name": "Lafrance, Camille",
+    "rider_id": 498,
+    "class": "1005 - Introductory Walk-Trot Test A",
+    "ring": "RING 3",
+    "day": "Samedi",
+    "time": "10:17"
+  },
+  {
+    "rider_name": "Lafrance, Camille",
+    "rider_id": 498,
+    "class": "1006 - Introductory Walk-Trot Test B",
+    "ring": "RING 3",
+    "day": "Samedi",
+    "time": "13:43"
+  },
+  {
+    "rider_name": "Lafrance, Camille",
+    "rider_id": 498,
+    "class": "1008 - Introductory Walk-Trot Test C",
+    "ring": "RING 2",
+    "day": "Dimanche",
+    "time": "11:52"
+  },
+  {
+    "rider_name": "Santerre, Amélie",
+    "rider_id": 508,
+    "class": "1009 - Introductory Walk-Trot Test A",
+    "ring": "RING 3",
+    "day": "Samedi",
+    "time": "09:47"
+  },
+  {
+    "rider_name": "Santerre, Amélie",
+    "rider_id": 508,
+    "class": "1010 - Introductory Walk-Trot Test B",
+    "ring": "RING 1",
+    "day": "Samedi",
+    "time": "12:00"
+  },
+  {
+    "rider_name": "Santerre, Amélie",
+    "rider_id": 508,
+    "class": "1011 - Introductory Walk-Trot Test B",
+    "ring": "RING 2",
+    "day": "Dimanche",
+    "time": "09:32"
+  },
+  {
+    "rider_name": "Santerre, Amélie",
+    "rider_id": 508,
+    "class": "1012 - Introductory Walk-Trot Test C",
+    "ring": "RING 2",
+    "day": "Dimanche",
+    "time": "13:55"
   }
 ]
