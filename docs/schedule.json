@@ -426,7 +426,6 @@
   {
     "rider_name": "Lavie, Camille",
     "rider_id": null,
-    "class": "Dressage H30 Amateur",
     "ring": "RING 3",
     "day": "Samedi",
     "time": "08:26"
@@ -442,7 +441,6 @@
   {
     "rider_name": "Dupasquier, Coralie",
     "rider_id": null,
-    "class": "Dressage H24 Amateur",
     "ring": "RING 3",
     "day": "Samedi",
     "time": "08:15"
@@ -458,7 +456,6 @@
   {
     "rider_name": "Burns, Lilianne",
     "rider_id": null,
-    "class": "Dresage - H24 Junior",
     "ring": "Combiné",
     "day": "Samedi",
     "time": "08:57"
@@ -474,7 +471,6 @@
   {
     "rider_name": "Paquette, Coralie",
     "rider_id": null,
-    "class": "Dresage - H24 Junior",
     "ring": "Combiné",
     "day": "Samedi",
     "time": "08:52"
@@ -490,7 +486,7 @@
   {
     "rider_name": "Cron, Juliette",
     "rider_id": null,
-    "class": "Dressage H18 Junior",
+    "class": "Dressage H18 Junior*",
     "ring": "RING 3",
     "day": "Samedi",
     "time": "08:00"
@@ -506,7 +502,7 @@
   {
     "rider_name": "Lafrance, Camille",
     "rider_id": null,
-    "class": "Dressage H18 Junior",
+    "class": "Dressage H18 Junior*",
     "ring": "RING 3",
     "day": "Samedi",
     "time": "08:05"
@@ -522,7 +518,7 @@
   {
     "rider_name": "Fontaine, Audréanne",
     "rider_id": null,
-    "class": "Dressage H18 Ouvert",
+    "class": "Dressage H18 Ouvert*",
     "ring": "RING 3",
     "day": "Samedi",
     "time": "07:55"
