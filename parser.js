@@ -262,6 +262,24 @@ async function parseRiders() {
             await new Promise(resolve => setTimeout(resolve, 500));
         }
 
+        const manualEntries = config.manualEntries || {};
+        for (const [riderName, rides] of Object.entries(manualEntries)) {
+            for (const ride of rides) {
+                allSchedules.push({
+                    rider_name: riderName,
+                    rider_id: null,
+                    class: ride.class,
+                    ring: ride.ring,
+                    day: ride.day,
+                    time: ride.time,
+                });
+            }
+        }
+        if (Object.keys(manualEntries).length > 0) {
+            const count = Object.values(manualEntries).reduce((sum, rides) => sum + rides.length, 0);
+            console.log(`Added ${count} manual entries`);
+        }
+
         return allSchedules;
 
     } catch (error) {
@@ -293,6 +311,7 @@ if (require.main === module) {
                 fs.mkdirSync('docs', { recursive: true });
             }
             fs.writeFileSync('docs/schedule.json', JSON.stringify(schedule, null, 2));
+            fs.writeFileSync('docs/meta.json', JSON.stringify({ showId: config.showId }, null, 2));
 
             console.log('\nSchedule saved to schedule.json and docs/schedule.json');
         })

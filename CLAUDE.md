@@ -41,9 +41,25 @@ cat schedule.json
 
 ## Configuration
 
-- **config.json**: Contains `showId` (competition ID) and `riderNames` array
+`config.json` supports three keys:
+
+- **`showId`** — competition ID used for all API calls
+- **`riderNames`** — array of rider names to fetch from the API (partial matching supported)
+- **`classMapping`** — maps verbose API test names to short French display names
+- **`manualEntries`** — object keyed by rider name, each value an array of schedule entries to inject directly into the output without an API call. Useful for riders/classes not available via the API (e.g. combined obstacle events).
+
+```json
+"manualEntries": {
+  "Tremblay, Sophie": [
+    { "class": "H30 Amateur", "ring": "Combiné", "day": "Samedi", "time": "15:50" }
+  ]
+}
+```
+
+Required fields per entry: `class`, `ring`, `day` (French: Vendredi/Samedi/Dimanche), `time` (HH:MM). These entries are appended after API-fetched schedules; `rider_id` is set to `null`.
+
+Other notes:
 - The parser respects API rate limits with 500ms delays between requests
-- Rider names support partial matching for flexibility
 - Output includes French day translations (Friday→Vendredi, Saturday→Samedi, Sunday→Dimanche)
 
 ## Key Functions

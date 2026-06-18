@@ -282,6 +282,10 @@
     <div class="header">
         <h1>Horaire Fantasia</h1>
         <p>Programme complet des épreuves</p>
+        <p style="margin-top:8px;font-size:0.85em;opacity:0.75;">
+            <a id="foxvillage-link" href="https://www.foxvillage.com" target="_blank" rel="noopener"
+               style="color:inherit;text-decoration:underline;">foxvillage.com</a>
+        </p>
     </div>
 
     <div class="tabs">
@@ -390,8 +394,18 @@
     async function loadSchedule() {
         try {
             const timestamp = new Date().getTime();
-            const response = await fetch(`./schedule.json?t=${timestamp}`);
+            const [response, metaResponse] = await Promise.all([
+                fetch(`./schedule.json?t=${timestamp}`),
+                fetch(`./meta.json?t=${timestamp}`)
+            ]);
             scheduleData = await response.json();
+            if (metaResponse.ok) {
+                const meta = await metaResponse.json();
+                if (meta.showId) {
+                    document.getElementById('foxvillage-link').href =
+                        `https://www.foxvillage.com/show?id=${meta.showId}`;
+                }
+            }
 
             console.log('Loading real schedule data from schedule.json');
             console.log(`Loaded ${scheduleData.length} entries`);
