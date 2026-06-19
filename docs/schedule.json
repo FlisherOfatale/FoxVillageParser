@@ -512,14 +512,6 @@
     "time": "15:40"
   },
   {
-    "rider_name": "Cron, Juliette",
-    "rider_id": null,
-    "class": "Dressage H18 Junior *",
-    "ring": "RING 3",
-    "day": "Samedi",
-    "time": "08:00"
-  },
-  {
     "rider_name": "Lafrance, Camille",
     "rider_id": null,
     "class": "H18 Junior *",
@@ -528,27 +520,11 @@
     "time": "15:45"
   },
   {
-    "rider_name": "Lafrance, Camille",
-    "rider_id": null,
-    "class": "Dressage H18 Junior *",
-    "ring": "RING 3",
-    "day": "Samedi",
-    "time": "08:05"
-  },
-  {
     "rider_name": "Fontaine, Audréanne",
     "rider_id": null,
     "class": "H18 Ouvert *",
     "ring": "Combiné",
     "day": "Dimanche",
     "time": "15:50"
-  },
-  {
-    "rider_name": "Fontaine, Audréanne",
-    "rider_id": null,
-    "class": "Dressage H18 Ouvert *",
-    "ring": "RING 3",
-    "day": "Samedi",
-    "time": "07:55"
   }
 ]
