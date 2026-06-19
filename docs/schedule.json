@@ -416,6 +416,38 @@
     "time": "13:55"
   },
   {
+    "rider_name": "Spielman, Meryl",
+    "rider_id": 155,
+    "class": "3009 - Niveau 1, Test 1",
+    "ring": "RING 2",
+    "day": "Samedi",
+    "time": "09:31"
+  },
+  {
+    "rider_name": "Spielman, Meryl",
+    "rider_id": 155,
+    "class": "3010 - Niveau 1, Test 2",
+    "ring": "RING 1",
+    "day": "Samedi",
+    "time": "10:50"
+  },
+  {
+    "rider_name": "Spielman, Meryl",
+    "rider_id": 155,
+    "class": "3011 - Niveau 1, Test 2",
+    "ring": "RING 1",
+    "day": "Dimanche",
+    "time": "10:09"
+  },
+  {
+    "rider_name": "Spielman, Meryl",
+    "rider_id": 155,
+    "class": "3012 - Niveau 1, Test 3",
+    "ring": "RING 3",
+    "day": "Dimanche",
+    "time": "11:00"
+  },
+  {
     "rider_name": "Lavie, Camille",
     "rider_id": null,
     "class": "H30 Amateur *",
