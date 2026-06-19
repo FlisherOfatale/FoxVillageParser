@@ -18,10 +18,18 @@
   {
     "rider_name": "Champagne, Chloé",
     "rider_id": 109,
-    "class": "2001 - Entrainement, Test 1",
-    "ring": "RING 2",
+    "class": "2005 - Entrainement, Test 1",
+    "ring": "RING 3",
     "day": "Samedi",
-    "time": "11:54"
+    "time": "13:33"
+  },
+  {
+    "rider_name": "Champagne, Chloé",
+    "rider_id": 109,
+    "class": "2007 - Entrainement, Test 2",
+    "ring": "RING 2",
+    "day": "Dimanche",
+    "time": "08:57"
   },
   {
     "rider_name": "Champagne, Chloé",
@@ -34,18 +42,10 @@
   {
     "rider_name": "Champagne, Chloé",
     "rider_id": 109,
-    "class": "2003 - Entrainement, Test 2",
-    "ring": "RING 2",
-    "day": "Dimanche",
-    "time": "10:49"
-  },
-  {
-    "rider_name": "Champagne, Chloé",
-    "rider_id": 109,
-    "class": "2004 - Entrainement, Test 3",
+    "class": "2008 - Entrainement, Test 3",
     "ring": "RING 3",
     "day": "Dimanche",
-    "time": "13:18"
+    "time": "13:30"
   },
   {
     "rider_name": "Burns, Lilianne",
@@ -101,7 +101,7 @@
     "class": "2008 - Entrainement, Test 3",
     "ring": "RING 3",
     "day": "Dimanche",
-    "time": "14:06"
+    "time": "14:12"
   },
   {
     "rider_name": "Dupasquier, Coralie",
@@ -110,6 +110,14 @@
     "ring": "RING 3",
     "day": "Samedi",
     "time": "08:15"
+  },
+  {
+    "rider_name": "Cron, Juliette",
+    "rider_id": 353,
+    "class": "1110 - H18 Épreuves Combinées",
+    "ring": "RING 3",
+    "day": "Samedi",
+    "time": "08:00"
   },
   {
     "rider_name": "Lavie, Camille",
@@ -253,7 +261,7 @@
     "class": "1006 - Introduction, Test B",
     "ring": "RING 3",
     "day": "Samedi",
-    "time": "13:38"
+    "time": "13:44"
   },
   {
     "rider_name": "Gareau, Éma",
@@ -261,7 +269,7 @@
     "class": "1007 - Introduction, Test B",
     "ring": "RING 2",
     "day": "Dimanche",
-    "time": "09:57"
+    "time": "09:58"
   },
   {
     "rider_name": "Gareau, Éma",
@@ -269,7 +277,7 @@
     "class": "1008 - Introduction, Test C",
     "ring": "RING 2",
     "day": "Dimanche",
-    "time": "11:57"
+    "time": "11:56"
   },
   {
     "rider_name": "Chenette Tucci, Élizabeth",
@@ -293,7 +301,7 @@
     "class": "1007 - Introduction, Test B",
     "ring": "RING 2",
     "day": "Dimanche",
-    "time": "10:07"
+    "time": "10:08"
   },
   {
     "rider_name": "Chenette Tucci, Élizabeth",
@@ -301,7 +309,7 @@
     "class": "1008 - Introduction, Test C",
     "ring": "RING 2",
     "day": "Dimanche",
-    "time": "12:07"
+    "time": "12:06"
   },
   {
     "rider_name": "Foisy, Juliette",
@@ -322,10 +330,18 @@
   {
     "rider_name": "Foisy, Juliette",
     "rider_id": 494,
+    "class": "1003 - Introduction, Test B",
+    "ring": "RING 2",
+    "day": "Dimanche",
+    "time": "10:37"
+  },
+  {
+    "rider_name": "Foisy, Juliette",
+    "rider_id": 494,
     "class": "1004 - Introduction, Test C",
     "ring": "RING 2",
     "day": "Dimanche",
-    "time": "13:25"
+    "time": "13:20"
   },
   {
     "rider_name": "Zheng, Lindsay",
@@ -341,7 +357,7 @@
     "class": "2001 - Entrainement, Test 1",
     "ring": "RING 2",
     "day": "Samedi",
-    "time": "12:00"
+    "time": "11:54"
   },
   {
     "rider_name": "Zheng, Lindsay",
@@ -349,7 +365,7 @@
     "class": "1007 - Introduction, Test B",
     "ring": "RING 2",
     "day": "Dimanche",
-    "time": "10:02"
+    "time": "10:03"
   },
   {
     "rider_name": "Zheng, Lindsay",
@@ -357,7 +373,15 @@
     "class": "2003 - Entrainement, Test 2",
     "ring": "RING 2",
     "day": "Dimanche",
-    "time": "11:01"
+    "time": "11:00"
+  },
+  {
+    "rider_name": "Lafrance, Camille",
+    "rider_id": 498,
+    "class": "1110 - H18 Épreuves Combinées",
+    "ring": "RING 3",
+    "day": "Samedi",
+    "time": "08:05"
   },
   {
     "rider_name": "Lafrance, Camille",
@@ -373,7 +397,7 @@
     "class": "1006 - Introduction, Test B",
     "ring": "RING 3",
     "day": "Samedi",
-    "time": "13:43"
+    "time": "13:49"
   },
   {
     "rider_name": "Lafrance, Camille",
@@ -381,7 +405,7 @@
     "class": "1008 - Introduction, Test C",
     "ring": "RING 2",
     "day": "Dimanche",
-    "time": "11:52"
+    "time": "11:51"
   },
   {
     "rider_name": "Santerre, Amélie",
@@ -389,7 +413,7 @@
     "class": "1009 - Introduction, Test A",
     "ring": "RING 3",
     "day": "Samedi",
-    "time": "09:47"
+    "time": "09:42"
   },
   {
     "rider_name": "Santerre, Amélie",
@@ -405,7 +429,7 @@
     "class": "1011 - Introduction, Test B",
     "ring": "RING 2",
     "day": "Dimanche",
-    "time": "09:32"
+    "time": "09:33"
   },
   {
     "rider_name": "Santerre, Amélie",
@@ -413,7 +437,7 @@
     "class": "1012 - Introduction, Test C",
     "ring": "RING 2",
     "day": "Dimanche",
-    "time": "13:55"
+    "time": "13:50"
   },
   {
     "rider_name": "Spielman, Meryl",
