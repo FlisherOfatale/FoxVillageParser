@@ -1,5 +1,5 @@
 {
-  "showId": 11892,
+  "showId": 11911,
   "riderNames": [
     "Champagne, Chloé",
     "Burns, Lilianne",
@@ -15,7 +15,8 @@
     "Foisy, Juliette",
     "Zheng, Lindsay",
     "Lafrance, Camille",
-    "Santerre, Amélie"
+    "Santerre, Amélie",
+    "Spielman, Meryl"
   ],
   "manualEntries": {
     "Lavie, Camille": [
@@ -31,16 +32,13 @@
       { "class": "H24 Junior *", "ring": "Combiné", "day": "Dimanche", "time": "15:25" }
     ],
     "Cron, Juliette": [
-      { "class": "H18 Junior *", "ring": "Combiné", "day": "Dimanche", "time": "15:40" },
-      { "class": "Dressage H18 Junior *", "ring": "RING 3", "day": "Samedi", "time": "08:00" }
+      { "class": "H18 Junior *", "ring": "Combiné", "day": "Dimanche", "time": "15:40" }
     ],
     "Lafrance, Camille": [
-      { "class": "H18 Junior *", "ring": "Combiné", "day": "Dimanche", "time": "15:45" },
-      { "class": "Dressage H18 Junior *", "ring": "RING 3", "day": "Samedi", "time": "08:05" }
+      { "class": "H18 Junior *", "ring": "Combiné", "day": "Dimanche", "time": "15:45" }
     ],
     "Fontaine, Audréanne": [
-      { "class": "H18 Ouvert *", "ring": "Combiné", "day": "Dimanche", "time": "15:50" },
-      { "class": "Dressage H18 Ouvert *", "ring": "RING 3", "day": "Samedi", "time": "07:55" }
+      { "class": "H18 Ouvert *", "ring": "Combiné", "day": "Dimanche", "time": "15:50" }
     ]
   },
   "classMapping": {
