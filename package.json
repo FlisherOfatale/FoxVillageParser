@@ -4,7 +4,8 @@
 "description": "Simple parser for equestrian competition data from FoxVillage",
 "main": "parser.js",
 "scripts": {
-"start": "node parser.js"
+"start": "node parser.js",
+"dev": "npx serve docs/"
 },
 "keywords": [
 "equestrian",
