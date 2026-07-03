@@ -315,6 +315,7 @@
                     <select id="rider-filter" onchange="filterByRider()">
                         <option value="">Tous les cavaliers</option>
                     </select>
+                    <a id="rider-foxvillage-link" href="#" target="_blank" rel="noopener" style="display:none; padding: 10px 20px; background: #2980b9; color: white; border-radius: 5px; text-decoration: none; font-size: 14px; transition: background 0.3s;">Résultats Foxvillage</a>
                     <button class="print-btn" onclick="printRider()">Imprimer</button>
                 </div>
             </div>
@@ -357,6 +358,7 @@
 <script>
     let scheduleData = [];
     let currentTab = 'schedule';
+    let currentShowId = null;
 
     // Get background color for ring - INLINE STYLES APPROACH
     function getRingColor(ring) {
@@ -407,6 +409,7 @@
             if (metaResponse.ok) {
                 const meta = await metaResponse.json();
                 if (meta.showId) {
+                    currentShowId = meta.showId;
                     document.getElementById('foxvillage-link').href =
                         `https://www.foxvillage.com/show?id=${meta.showId}`;
                 }
@@ -548,16 +551,26 @@
     function filterByRider() {
         const selectedRider = document.getElementById('rider-filter').value;
         const container = document.getElementById('rider-schedule');
+        const foxvillageLink = document.getElementById('rider-foxvillage-link');
 
         // Update URL
         updateUrl({ tab: 'riders', rider: selectedRider });
 
         if (!selectedRider) {
+            foxvillageLink.style.display = 'none';
             container.innerHTML = '<div class="no-data">Sélectionnez un cavalier</div>';
             return;
         }
 
         const riderData = scheduleData.filter(item => item.rider_name === selectedRider);
+
+        const riderId = riderData.find(item => item.rider_id !== null)?.rider_id;
+        if (riderId && currentShowId) {
+            foxvillageLink.href = `https://www.foxvillage.com/result?type=rider&showid=${currentShowId}&id=${riderId}`;
+            foxvillageLink.style.display = 'inline-block';
+        } else {
+            foxvillageLink.style.display = 'none';
+        }
         const days = ['vendredi', 'samedi', 'dimanche'];
         let html = '';
 
