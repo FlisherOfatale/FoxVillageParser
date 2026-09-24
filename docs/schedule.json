@@ -206,5 +206,29 @@
     "ring": "Manege/Ring 2",
     "day": "Dimanche",
     "time": "08:24"
+  },
+  {
+    "rider_name": "Gareau, Ema",
+    "rider_id": 1544,
+    "class": "101 - Initiation A",
+    "ring": "Manege/Ring 2",
+    "day": "Vendredi",
+    "time": "09:00"
+  },
+  {
+    "rider_name": "Gareau, Ema",
+    "rider_id": 1544,
+    "class": "102 - Initiation B",
+    "ring": "Manege/Ring 2",
+    "day": "Samedi",
+    "time": "08:30"
+  },
+  {
+    "rider_name": "Gareau, Ema",
+    "rider_id": 1544,
+    "class": "103 - Initiation C",
+    "ring": "Manege/Ring 2",
+    "day": "Dimanche",
+    "time": "08:48"
   }
 ]
