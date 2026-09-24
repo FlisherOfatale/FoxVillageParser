@@ -1,45 +1,17 @@
 {
-  "showId": 11911,
+  "showId": 11963,
   "riderNames": [
     "Champagne, Chloé",
     "Burns, Lilianne",
     "Paquette, Coralie",
     "Dupasquier, Coralie",
-    "Cron, Juliette",
     "Lavie, Camille",
-    "Dion-Monette, Félicia",
-    "Roy, Julie",
-    "Fontaine, Audréanne",
     "Gareau, Éma",
-    "Chenette Tucci, Élizabeth",
     "Foisy, Juliette",
     "Zheng, Lindsay",
-    "Lafrance, Camille",
-    "Santerre, Amélie",
-    "Spielman, Meryl"
+    "Lafrance, Camille"
   ],
   "manualEntries": {
-    "Lavie, Camille": [
-      { "class": "H30 Amateur *", "ring": "Combiné", "day": "Dimanche", "time": "14:50" }
-    ],
-    "Dupasquier, Coralie": [
-      { "class": "H24 Amateur *", "ring": "Combiné", "day": "Dimanche", "time": "15:10" }
-    ],    
-    "Burns, Lilianne": [
-      { "class": "H24 Junior *", "ring": "Combiné", "day": "Dimanche", "time": "15:20" }
-    ],    
-    "Paquette, Coralie": [
-      { "class": "H24 Junior *", "ring": "Combiné", "day": "Dimanche", "time": "15:25" }
-    ],
-    "Cron, Juliette": [
-      { "class": "H18 Junior *", "ring": "Combiné", "day": "Dimanche", "time": "15:40" }
-    ],
-    "Lafrance, Camille": [
-      { "class": "H18 Junior *", "ring": "Combiné", "day": "Dimanche", "time": "15:45" }
-    ],
-    "Fontaine, Audréanne": [
-      { "class": "H18 Ouvert *", "ring": "Combiné", "day": "Dimanche", "time": "15:50" }
-    ]
   },
   "classMapping": {
     "USDF Introductory Level, Test A 2023": "Initiation A",
